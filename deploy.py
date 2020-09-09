@@ -154,7 +154,7 @@ for o in opts:
         ZipFile = o[1]
 
 # Automatically combine Org, Env, Name to Directory path
-Directory = Organization + '/' + Environment + '/api proxies/' + Name
+# Directory = Organization + '/' + Environment + '/api proxies/' + Name
 
 if UserPW == None or \
         (Directory == None and ZipFile == None) or \
