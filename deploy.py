@@ -140,9 +140,8 @@ for o in opts:
         Organization = o[1]
     elif o[0] == '-h':
         ApigeeHost = o[1]
-# -d not need anymore, will be combined from Org, Env, Name.
-#    elif o[0] == '-d':
-#        Directory = o[1]
+    elif o[0] == '-d':
+        Directory = o[1]
     elif o[0] == '-e':
         Environment = o[1]
     elif o[0] == '-p':
