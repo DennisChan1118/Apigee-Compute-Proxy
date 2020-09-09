@@ -19,3 +19,8 @@ The expected result is
     }
 }
 ```
+## Test-AddInteger.sh
+
+```
+sh Test-AddInteger.sh {Arg1} {Arg2} {your API Key}
+```
