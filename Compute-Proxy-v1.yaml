@@ -1,0 +1,61 @@
+swagger: '2.0'
+info:
+  description: 'An API for two integer calculation.'
+  version: 1.0.0
+  title: Compute-Proxy-v1
+host: 10.140.0.3:9001
+schemes:
+  - http
+basePath: /v1/compute
+securityDefinitions:
+  APIKeyQuery:
+    type: apiKey
+    in: query
+    name: apikey
+  basicAuth:
+    type: basic
+    description: 'HTTP Basic Authentication.'
+paths:
+  /add:
+    post:
+      summary: 'Send two integers and view the sum of them.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      operationId: AddInteger
+      description: 'Send two integers and view the sum of them in JSON format.<p>The request payload can be specified using one of the following format: application/json.'
+      security:
+        - APIKeyQuery: []
+        - basicAuth: []
+      parameters:
+        - name: integers
+          in: body
+          description: 'Request payload in application/json format.'
+          required: true
+          schema:
+            $ref: '#/definitions/request-integers'
+      responses:
+        '200':
+          description: 'Success.'
+          schema:
+            $ref: '#/definitions/response-answer'
+definitions:
+  request-integers:
+    type: object
+    required:
+      - arg1
+      - arg2
+    properties:
+      arg1:
+        type: string
+        description: 'The first integer to be calculated.'
+      arg2:
+        type: string
+        description: 'The second integer to be calculated.'
+  response-answer:
+    type: object
+    properties:
+      answer:
+        type: string
+        description: 'The answer of the calculation.'
