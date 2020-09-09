@@ -140,9 +140,8 @@ for o in opts:
         Organization = o[1]
     elif o[0] == '-h':
         ApigeeHost = o[1]
-# -d not need anymore, will be combined from Org, Env, Name.
-#    elif o[0] == '-d':
-#        Directory = o[1]
+    elif o[0] == '-d':
+        Directory = o[1]
     elif o[0] == '-e':
         Environment = o[1]
     elif o[0] == '-p':
@@ -155,7 +154,7 @@ for o in opts:
         ZipFile = o[1]
 
 # Automatically combine Org, Env, Name to Directory path
-Directory = Organization + '/' + Environment + '/api proxies/' + Name
+# Directory = Organization + '/' + Environment + '/api proxies/' + Name
 
 if UserPW == None or \
         (Directory == None and ZipFile == None) or \
