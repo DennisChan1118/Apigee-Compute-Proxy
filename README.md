@@ -19,8 +19,15 @@ The expected result is
     }
 }
 ```
+
 ## Test-AddInteger.sh
 
 ```
 sh Test-AddInteger.sh {Arg1} {Arg2} {your API Key}
+```
+
+## deploy.py
+
+```
+deploy.py -n {apiName} -u {myname:mypass} -o {myorg} -e {environment} -p {basePath}
 ```
