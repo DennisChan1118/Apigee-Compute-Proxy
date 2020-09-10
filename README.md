@@ -26,8 +26,8 @@ The expected result is
 sh Test-AddInteger.sh {Arg1} {Arg2} {your API Key}
 ```
 
-## deploy.py
+## deploy-proxy.py
 
 ```
-deploy.py -n {apiName} -u {myname:mypass} -o {myorg} -e {environment} -p {basePath}
+python deploy-proxy.py -n {apiName} -p {basePath} -u {myname:mypass} -o {myorg} -e {environment} -d {proxy boundle directory path}
 ```
